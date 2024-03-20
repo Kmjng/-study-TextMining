@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <title>radio(단일선택), select(선택상자), file(파일 선택)</title>
 </head>
-
+<!--서버에 전송될 때, http://www.naver.com/?gender=남&job=학생&filename=text.txt 
+			으로 전달된다. -->
 <body>
    <form  method="get" action="http://www.naver.com">
      <fieldset>
          <legend>성별</legend>
          <input type="radio" name="gender" value="남"> 남자
          <input type="radio" name="gender" value="여" checked>여자
-         <!--  gender="남" 또는 gender="여" 저장 -->
+         <!--  gender="남" 또는 gender="여" 저장, checked는 기본값 -->
      </fieldset>
      <fieldset>
           <legend> 직업선택 </legend>
