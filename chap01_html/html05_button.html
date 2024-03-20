@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+    <meta charset="UTF-8">
+    <title>셀 합치기, 버튼 스타일 </title>
+    <style> /* .btn이라는 class가 선택자 
+				tag/.class/#id{스타일}
+				tag선택자, class선택자, id선택자 */
+      .btn{height: 40pt;
+           background: whitegray; }           
+	  .inputbox{ border-radius : 50px}
+    </style>
+</head>
+<body>
+    <table  border="1" align="center">
+    <caption> ~로그인 창~ </caption> <!--테이블 이름지정 caption -->
+      <tr> <!-- 1행 -->
+        <td>
+            <input type="text" size="15" class="inputbox"/> <!--input 태그로 입력상자, type으로 속성 지정 -->
+        </td>
+        <!-- 2열 : 행 합치기 rowspan -->
+        <td rowspan="2" align="center">
+            <input type="button" value="로그인" class="btn"/> 
+			<!--입력상자를 button 속성으로 -->
+				<!--클래스 속성값 btn 으로 부여 -->
+        </td>
+      </tr>
+   
+      <tr> <!-- 2행 -->    
+        <td> <input type="password" size="15" class="inputbox"/> </td>
+      </tr>
+    </table>
+</body>
+</html>
