@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> table 태그 </title>
+ <style> 
+   /* css 영역 : 스타일 적용 */
+
+   /*a 태그 스타일 : 밑줄 제거, 글자색 지정 */
+   a{text-decoration : none;
+      color : green
+	}
+	a:hover{text-decoration : none; /*마우스 오버시 */
+      color : blue
+	}
+
+   /*th 태그 스타일 : 제목열 높이, 배경색, 글자색 지정  */
+   th{ height : 50px;
+        background-color : green;
+        color : white
+	}
+
+    /*img 태그 스타일 : 바깥쪽 여백, 라운딩, 넓이, 높이 */
+	img{ 
+        margin: 5px;   /* 이미지 기준 상하좌우 바깥쪽 여백 */
+        border-radius : 100px; /* 이미지 라이딩 처리 */
+		width : 300px; /* 가로픽셀 */
+		height : 250px; /* 세로픽셀*/
+      } 
+
+	 /*class 선택자 : 상품명 가운데 정렬, 넓이, 배경색, 글자색, 글꼴 */
+	 .product{text-align : center;
+	             width : 100px;
+                 background-color : white;
+                 color : green;
+                 font-weight : bold} 
+ </style>
+</head>
+<body>
+  <div align="center">
+  <!-- 제목 링크 적용 -->
+  <h1> <a href="https://shopping.naver.com/home"> 가전제품 쇼핑몰 </a> </h1>
+  <table border="1">
+    <tr>     
+     <th> 최신 상품 이미지 </td>
+     <th> 상품명 </td> 
+    </tr> 
+   
+    <tr>     
+     <td> <img src="../images/img01.jpg"/> </td>
+     <td class='product'> 냉장고 </td> 
+    </tr>     
+
+   <tr>     
+     <td> <img src="../images/img02.jpg"/> </td>
+     <td class='product'> 세탁기 </td> 
+    </tr>  
+
+    <tr>     
+     <td> <img src="../images/img03.jpg"/> </td>
+     <td class='product'> 전자레인지 </td> 
+    </tr>  
+
+    <tr>     
+     <td> <img src="../images/img04.jpg"/> </td>
+     <td class='product'> HDTV </td> 
+    </tr>  
+  </table>
+ </div>
+</body>
+</html>
+
