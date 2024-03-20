@@ -3,29 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title> form 태그 </title>
+	<style> /* CSS 영역: 스타일 제공 */ </style>
+	<script>
+		//<script>태그는 Javascript 영역: 동적 기능 제공 
+		function CheckForm(){
+			// alert("함수 호출중.."); // 알림창 
+			
+			// <body>에서 요소 가져오기 (아이디, 비번 입력했는지 검사~) 
+			// document 는 body 밑 내용 전체
+			var uid = document.getElementById("uid"); // id 입력상자 변수 가져옴
+			var pwd = document.getElementById("pwd"); // pwd 입력상자 변수 가져옴
+			if(uid.value == ""||pwd.value==""){  // 둘 중 하나 없다면 
+				alert('아이디 또는 비번을 입력하세요.');
+				uid.focus(); // 커서 이동 
+				return false; // 서버 전송 차단 
+				}
+			else{ return true; }
+		
+			}
+	</script>
 </head>
 <body>
-    <!-- form 태그
-      - 서버로 전송할 데이터의 양식을 작성하는 태그
-      - method : 데이터 전송 방식(get : url노출, post : 은닉)
-      - action :  대상이 되는 서버 지정
+    <!--
+		양식태그는 다음과 같이 생겼다. 
+		<input type='text'> : text 입력상자
+		<input type='password'> : 암호 입력상자 
+		<input type='submit'> : 서버 전송 버튼 
+		<input type='reset'> : 서버 전송 취소 버튼
+		<input type='radio'> : 여러개 중 하나 선택 버튼
+		<input type='file'> : 파일선택 상자
+		목록상자는 input type 말고 <select> 타입으로 쓰인다. 
      -->
-     
-  <fieldset> <!-- 제목을 갖는 테두리 -->
+  <fieldset> <!-- fieldset: form요소에서 연관된 요소들 묶을 때, 
+     			  제목을 갖는 테두리 (박스 모양의 선)	 -->
+		
       <legend> 아이디와 암호를 입력하세요. </legend>
   <form method="get" action="http://www.naver.com">
+  <!--  http://www.naver.com/?id=hong;pwd=1234 보여주고 싶지 않으면 -->
+  <!-- <form method="post" action="http://www.naver.com">-->
   <table border="1" align="center">
     <tr>
        <th> 아이디 </th>
        <td> <input type="text" name="uid" id="uid"/> </td>
+	   				<!-- uid = 'hong' name변수에 저장되어서 서버로 전송된다-->
     </tr>
     <tr>
        <th> 암호 </th>
        <td> <input type="password" name="pwd" id="pwd"/> </td>
+	   				<!-- pwd = '1234' -->
     </tr>
     <tr>
-       <th colspan="2">
-          <input type="submit" value="전송"/> &nbsp;
+       <th colspan="2"> 
+          <input type="submit" value="전송" onclick="return CheckForm()"/> &nbsp;
           <input type="reset" value="취소"/> 
        </th>
     </tr>
