@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+  <meta charset="UTF-8">
+  <title> ~table 태그~ </title>
+  <style> /*  style태그는 head에 온다 */
+	th{  /*tr 태그 선택자 */
+	color: white;
+	background-color: skyblue;
+	}
+	td{ 
+	color: purple;
+	background-color: beige;
+	text-align: center
+	}
+  </style>
+</head>
+<body>
+  <div align="center"> <!-- body 정렬 -->
+  <h2> Table 관련 태그 </h2>
+  <table border="1" width="500"> <!--border: 외곽선 -->
+    <!-- 1행 태그 -->
+    <tr> 
+     <!-- 제목 열 태그 : 기본으로 가운데정렬, 진하게 설정 됨-->
+     <th> 이름 </th>
+     <th> 직업 </th> 
+    </tr>  
+   <!-- 2행 태그 -->
+   <tr>
+      <!-- 내용 열 태그 -->
+      <td > 홍길동 </td>
+      <td> 회사원 </td>
+   </tr> 
+   <!-- 3행 태그 -->
+   <tr >
+      <!-- 내용 열 태그 -->
+      <td> 강호동 </td>
+      <td> 연예인 </td>
+   </tr> 
+  </table>
+ </div>
+</body>
+</html>
+
