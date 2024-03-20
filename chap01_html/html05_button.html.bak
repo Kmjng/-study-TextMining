@@ -8,19 +8,19 @@
 				tag선택자, class선택자, id선택자 */
       .btn{height: 40pt;
            background: whitegray; }           
-	  .inputbox{ border-radius : 50px}
+	  .inputbox{ border-radius : 50px} /*입력상자 라운딩 처리*/
     </style>
 </head>
 <body>
     <table  border="1" align="center">
-    <caption> 로그인 창 </caption> <!--테이블 이름지정 caption -->
+    <caption> ~로그인 창~ </caption> <!--테이블 이름지정 caption -->
       <tr> <!-- 1행 -->
         <td>
-            <input type="text" size="15" class="inputbox"/> <!--input 태그로 입력상자, type으로 속성 지정 -->
+            <input type="text" size="15" id="u_id" class="inputbox"/> <!--input 태그로 입력상자, type으로 속성 지정 -->
         </td>
         <!-- 2열 : 행 합치기 rowspan -->
         <td rowspan="2" align="center">
-            <input type="button" value="로그인" class="btn"/> 
+            <input type="button" value="로그인" id="u_pwd"  class="btn"/> 
 			<!--입력상자를 button 속성으로 -->
 				<!--클래스 속성값 btn 으로 부여 -->
         </td>
