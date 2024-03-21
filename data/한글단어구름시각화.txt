@@ -1,0 +1,4 @@
+wc = WordCloud(font_path='C:/Windows/Fonts/malgun.ttf',
+          width=500, height=400,
+          max_words=100,max_font_size=150,
+          background_color='white')
