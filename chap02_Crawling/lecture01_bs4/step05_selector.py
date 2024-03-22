@@ -29,6 +29,7 @@ print(src)
 # 2. html 파싱
 html = BeautifulSoup(src, 'html.parser')
 print(html)
+type(html) # >> class 'bs4.BeautifulSoup'
 
 
 # 3. 선택자 이용 태그 내용 가져오기 
