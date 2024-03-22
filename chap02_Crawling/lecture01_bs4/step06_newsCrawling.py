@@ -49,7 +49,7 @@ def crawler_fn(url): # 페이지 고정
         # 4. 내용 수집  
         article = html.select('div.news_view > div.article_view > section > p')
         
-        # 여러개 문단(p) -> 한 개의 변수로 텍스트 누적 
+        # 여러개 문단(p 태그) -> 한 개의 변수로 텍스트 누적 
         conts = ""
         for p in article :
             text = str(p.text).strip()
@@ -72,4 +72,19 @@ len(titles) # >> 20
 len(contents) # >> 20 
 
 print(titles)
+print(contents)
 
+
+# 2024-03-22 
+
+# 데이터프레임으로 파일저장하기
+import pandas as pd 
+'''
+[제목] [내용]
+'''
+daum_news = pd.DataFrame({'title':titles, 'news':contents})
+
+print(daum_news)
+
+path = r'C:/ITWILL/3_TextMining/TextMining/data'
+daum_news.to_csv(path+'/daum_news.csv', index=False)
