@@ -95,7 +95,8 @@ dir(counter)
 '''
 ...'most_common',... #TopN 
 '''
-# dict의 key, value를 튜플로
+# most_common메소드
+# dict의 key, value를 튜플로 감싸서 리스트 반환 ★★
 top5 = counter.most_common(n=5)
 print(top5)
 '''
