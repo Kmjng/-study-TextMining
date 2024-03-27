@@ -16,7 +16,7 @@ values2 = [4, 12, 5, 7]
 colors = ['blue', 'green', 'red', 'purple']  # 막대의 색상 리스트
 
 # <조건1> 막대 그래프 그리기 
-plt.bar(categories, values )
+plt.bar(categories, values, color = colors) 
 plt.xlabel('카테고리')
 plt.ylabel('값')
 plt.show()
