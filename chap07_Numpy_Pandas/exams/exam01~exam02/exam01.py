@@ -44,8 +44,8 @@ print(diff)
 # numpy의 sum()을 사용해야 broadcast 연산이 가능하다. ★★★
 # 따라서 내장함수가 아닌 numpy라이브러리 메소드로 사용한다. 
 # 행 단위로 연산하고자 할 때
-# axis = 0 => 행 보존 (열 단위 연산)
-# axis = 1 => 열 보존 (행 단위 연산)
+# axis = 0 => 열 내에서 연산
+# axis = 1 => 행 내에서 연산
 
 diff_sum = diff.sum(axis = 1)
 diff_sum1 = np.sum(diff, axis =1) # 동일한 방법
