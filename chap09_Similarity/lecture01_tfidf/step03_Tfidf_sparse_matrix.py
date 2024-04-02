@@ -49,16 +49,19 @@ memory usage: 87.2+ KB
 '''
 # 2) target, texts 전처리 : 공백, 특수문자, 숫자  
 target = spam_data[0]
-
 target = np.array(target) # 배열화
+print(target)
+'''
+['ham' 'ham' 'spam' ... 'ham' 'ham' 'ham']
+'''
 
 # 가변수(더미변수) 만들기 
 target = [1 if t=='spam' else 0 for t in target]
 print(target)
-
-texts = spam_data[1]
+target = np.array(target)
 
 # 전처리 전
+texts = spam_data[1]
 print(texts)
 
 # << texts 전처리 함수 >> 
@@ -119,6 +122,7 @@ x_train, x_test, y_train, y_test = train_test_split(
 # x에 dtm_arr (문장수,빈도수) , 
 # y에 target (0과 1)
 dtm_arr.shape # >> (5574, 5000)
+
 target.shape # >> (5574,)
 
 x_train.shape # >> (3901, 5000) # 70 % 
