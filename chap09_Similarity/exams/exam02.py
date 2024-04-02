@@ -23,9 +23,10 @@ data.info()
  0   id       34525 non-null  int64 
  1   review   34525 non-null  object
  2   label    34525 non-null  int64 
- 3   review2  34525 non-null  object -> 사용할 칼럼 (34525개의 문서)
+ 3   review2  34525 non-null  object -> 사용할 칼럼 (34525개의 문서) (정제 돼있음..)
 '''
 print(data.head())
+print(data.iloc[1:4:2])
 
 # 사용할 문서 5,000개 제한  
 review = data.review2[:5000] # 1번째 ~ 5000번째 문서 
