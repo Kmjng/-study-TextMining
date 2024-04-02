@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-한글 문서 유사 단어 검색
+한글 문서 유사 단어 검색 (생략)
 """
 import pandas as pd # csv file read
 from gensim.models import Word2Vec # model 
