@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Index</title>
+    <style>
+      #name{
+            color : blue; 
+            font-size : large
+      }
+    </style>
+</head>
+<body>
+  <div align="center">
+      <h2> 구매자 정보 </h2>
+      <hr/>
+      <table border="0" width="400">
+          <tr>              
+              <th id="name"> 이름 : {{ name }} </th> 
+              <th> 
+                <img src="{{url_for('static', filename='images/'+ name + '.png')}}"> 
+                                        <!-- 고객 이름(name) 에 따라서 달라지도록 -->
+              </th>
+          </tr>
+      </table> 
+      <a href='/'> 시작 페이지 </a>
+  </div>
+
+</body>
+</html>
