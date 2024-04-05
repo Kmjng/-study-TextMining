@@ -7,6 +7,7 @@
 '''
 
 from flask import Flask, render_template, request 
+# request : 파라미터 받는 모듈
 
 app = Flask(__name__)
 
@@ -16,7 +17,7 @@ def index() :
     return render_template('/step03/get_method.html') # 시작 페이지 
 
 # 서버 요청 : http://127.0.0.1/login?uid=hong 
-@app.route('/login', methods=['GET']) # 전송방식 
+@app.route('/login', methods=['get']) # 전송방식 
 def login() :
     uid = request.args.get('uid')
     print(uid) #콘솔 출력
