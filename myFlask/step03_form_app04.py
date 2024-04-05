@@ -19,15 +19,10 @@ def index() :
 
 @app.route('/choice', methods=['GET']) # get방식 전송   
 def choice() :
-    img_file = request.args.get('image') # get방식 파라미터 받기  
-    print(img_file)
+    img_file = request.args.get('image') # get방식 파라미터받기
+    # 템플릿의 image 변수의 값들을 img_file 객체화 (?) 
+    return render_template('/step03/choice.html', img_file=img_file)
 
 if __name__ == '__main__':
     app.run(port=80)
-
-
-
-
-
-
 
