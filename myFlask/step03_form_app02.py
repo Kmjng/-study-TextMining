@@ -18,16 +18,16 @@ def index() :
 
 @app.route('/login', methods=['POST']) # 전송방식 
 def login() :  
-    uid = request.form['uid']
-    pwd = request.form['pwd']
-    print(uid, pwd)
+    userid = request.form['uid']
+    passwd = request.form['pwd']
+    # print(userid, passwd)
+    return f'유저아이디:{userid}, 비번:{passwd}'
+
+'''
+http://127.0.0.1/login 화면에
+유저아이디:hong, 비번:1234 가 출력됨
+'''
 
 if __name__ == '__main__':
     app.run(port=80)
-
-
-
-
-
-
 
