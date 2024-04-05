@@ -17,11 +17,21 @@
         <th> 상품 정보 </th>
     </tr>
     <tr>
-        <td> 
-          <img src="{{ url_for('static', filename='images/img01.jpg') }}"/> 
+        <td> <!--상품 이미지 -->
+          <img src="{{ url_for('static', filename='images/'+img_file) }}"/> 
         </td>
-        <td>              
-             <h2> 냉장고 </h2>
+        <td> <!--상품 정보 -->             
+             <h2> {% if img_file == 'img01.jpg' %}
+                     냉장고
+                {% elif img_file =='img02.jpg' %}
+                    세탁기
+                {% elif img_file =='img03.jpg' %}
+                    전자레인지
+                {% elif img_file =='img04.jpg' %}
+                    HDTV
+                {% endif %}
+                           
+              </h2>
         </td>
     </tr>
      <tr>
