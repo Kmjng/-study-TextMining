@@ -18,6 +18,8 @@
       <h1> 가전제품 쇼핑몰 </h1>
       
       <form method="get" action="/choice">
+      <!--choice url로 get방식으로 전달해라★ 
+          Flask app파일에서 확인해보니, image변수를 전달한다. -->
           <table border="1" width="400">
             <tr>     
               <th id="col1"> 구매상품 </td>  <th id="col2"> 선택 </td> 
@@ -27,6 +29,7 @@
              <td class='contents'> 냉장고 </td>  
              <td>
                 <input type="radio" name="image" value="img01.jpg" checked/> 
+             <!--image변수의 값은 img01.jpg ★★★-->
              </td> 
             </tr>             
            <tr>     
