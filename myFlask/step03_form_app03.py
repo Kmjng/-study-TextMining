@@ -14,8 +14,15 @@ app = Flask(__name__)
 @app.route('/') # 시작 페이지
 def index() :
     return render_template('/step03/post_method.html') # 시작 페이지
-
-
+# => post방식으로 할 경우 
+'''
+     <form  method="post" action= "/login">
+      <table border="1">....</form>
+'''
+''' 
+index() 첫화면에서 render하는 template이 post방식이면 
+get방식으로 request하고, method 면 method 방식으로 request 함
+'''
 @app.route('/login', methods=['GET', 'POST'])    
 def login() :    
     if request.method == 'GET' :
@@ -29,10 +36,4 @@ def login() :
 
 if __name__ == '__main__':
     app.run(port=80)
-
-
-
-
-
-
 
